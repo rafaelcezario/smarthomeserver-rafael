@@ -3,7 +3,7 @@ version: "3"
 # a couple of services for your smarthome, remember to set up your .env file first
 services:
   mosquitto:
-    image: "eclipse-mosquitto:1.6"
+    image: "eclipse-mosquitto:latest"
     restart: unless-stopped
     volumes:
       - "${DATADIR}/mosquitto/config:/mosquitto/config"
@@ -31,7 +31,7 @@ services:
     #  - GF_SECURITY_ALLOW_EMBEDDING=true
 
   influxdb:
-    image: "influxdb:1.8"
+    image: "influxdb:latest"
     restart: unless-stopped
     volumes:
       - "${DATADIR}/influxdb/data:/var/lib/influxdb"
